@@ -1,0 +1,16 @@
+[package]
+name = "grpc_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tonic = "0.8.2"
+tokio = { version = "1.18.0", features = ["rt","macros", "rt-multi-thread"] }
+prost = "0.11.0"
+deadpool-postgres = "0.10.2" 
+tokio-postgres = "0.7.7"
+
+[build-dependencies]
+tonic-build = "0.8.2"

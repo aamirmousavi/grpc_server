@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "./blog";
+
+package blog;
+
+service Blog {
+    rpc GetPost(PostRequest)returns (Post){}
+}
+message PostRequest{
+    int64 id =1;
+}
+
+message Post {
+    int64 id =1;
+    string title = 2;
+    string text = 3;
+    int64 category = 4;
+    int64 auhtor = 5;
+}
